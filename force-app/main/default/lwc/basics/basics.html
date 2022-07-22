@@ -1,0 +1,38 @@
+<template>
+    <div class="body">
+    <lightning-card icon-name="utility:ad_set">
+        My name is : {name}
+        <lightning-button label="Call me" onclick={handlecall}></lightning-button>
+    </lightning-card>
+    </div>
+    <div class="part">
+    <lightning-card title="grater of 3 number" icon-name="utility:alert">
+        <lightning-input label="enter First number" onchange={firstNum} value={num1} style="padding: 10px;"></lightning-input>
+        <lightning-input label="enter Second number" onchange={secondtNum} value={num2} style="padding: 10px;"></lightning-input>
+        <lightning-input label="enter Third number" onchange={thirdtNum} value={num3} style="padding: 10px;"></lightning-input>
+<lightning-button-group>
+    <lightning-button label="Calculate" variant="brand" onclick={calculateme} style="padding:5px ;"></lightning-button>
+    <lightning-button label="Clear" variant="brand-outline" onclick={clearme} style="padding:5px ;"></lightning-button>
+
+</lightning-button-group>
+    </lightning-card>
+    </div>
+    <div class="sect">
+    <lightning-card title="Simple Interset calculater" icon-name="utility:calculated_insights">
+        <lightning-input label="Enter Amount" onchange={Amount} value={Amo1} style="padding: 10px;"></lightning-input>
+        <lightning-input label="Enter Term of Inverstment" onchange={term} value={term01} style="padding: 10px;"></lightning-input>
+        <lightning-input label="Enter Rate of Interest" onchange={Rate} value={rate01} style="padding: 10px;"></lightning-input>
+        <lightning-layout-item size= "12" padding = "around-medium" > </lightning-layout-item>
+        <lightning-formatted-text value= {currentOutput}  ></lightning-formatted-text><br/>
+
+        <lightning-layout-item size= "12" padding = "around-medium" > </lightning-layout-item>
+        <lightning-formatted-text value= {out}  ></lightning-formatted-text>
+
+    <lightning-button-group>
+    <lightning-button label="Calculate" variant="brand" onclick={calculate} style="padding:5px ;"></lightning-button>
+    <lightning-button label="Clear" variant="brand-outline" onclick={clear} style="padding:5px ;"></lightning-button>
+
+</lightning-button-group>
+    </lightning-card>
+    </div>
+</template>
